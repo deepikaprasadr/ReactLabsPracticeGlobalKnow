@@ -1,0 +1,17 @@
+npm create vite@latest lab1-day-jslib
+cd proj
+npm install
+
+index.html entry point of applicaton. vite uses this to inject the react app
+
+src/main.jsx main js file where your react app is initialzed and rendered into the index.html
+
+app.jsx this is the root component of ur react app
+
+vite.config.js this fiel contains vites config. this file contains vit/s config. you will likely modify this as your proj grows.
+
+pkg.jsson proj dependencies and scripts
+
+
+
+npm install dayjs
