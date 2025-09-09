@@ -42,4 +42,14 @@ git pull --rebase brings in the remote commits and replays your new commit on to
 
 Then you can push without conflicts.
 
+
+**ouput**
+<img width="1073" height="691" alt="image" src="https://github.com/user-attachments/assets/6ea30bc2-1a61-4b48-a17b-3236d8d5347a" />
+<img width="1016" height="699" alt="image" src="https://github.com/user-attachments/assets/f2044244-76a2-46eb-afcf-2758ceac489c" />
+<img width="1090" height="738" alt="image" src="https://github.com/user-attachments/assets/762115e0-bcae-490b-bf16-bb3843bc6bb6" />
+
+
+
+
+
 -Deepika
