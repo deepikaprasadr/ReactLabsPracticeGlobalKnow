@@ -34,3 +34,4 @@ GitCode push:
 4.git commit -m "Added lab4acontactformapp contact form project"
 5.git push origin main
 6.completed
+7.git pull origin main
