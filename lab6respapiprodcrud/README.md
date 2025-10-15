@@ -13,3 +13,9 @@ to save to git repo
 3.@deepikaprasadr ➜ /workspaces/ReactLabsPracticeGlobalKnow (main) $ git add lab6respapiprodcrud/
 4.git commit -m "Add lab6respapiprodcrud React project (Vite scaffold)"
 5.git push origin main
+
+I updated one readme file later. How to update on git
+1.@deepikaprasadr ➜ /workspaces/ReactLabsPracticeGlobalKnow (main) $ git add lab6respapiprodcrud/README.md
+2.@deepikaprasadr ➜ /workspaces/ReactLabsPracticeGlobalKnow (main) $ git commit -m "update readme for lab6restapiprodcrud"
+ 3.@deepikaprasadr ➜ /workspaces/ReactLabsPracticeGlobalKnow (main) $ git push origin main
+ --saved
