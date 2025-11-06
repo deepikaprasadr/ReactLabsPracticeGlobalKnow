@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.js
+import React, { useState } from 'react';
+import ProductList from './components/ProductList';
+import Product from './components/Product';
+import ProductForm from './components/ProductForm';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isAdding, setIsAdding] = useState(false);
+
+  const handleSelectProduct = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const handleBack = () => {
+    setSelectedProduct(null);
+    setIsAdding(false);
+  };
+
+  const handleAddProduct = (product) => {
+    setIsAdding(false);
+    // Ideally, update the product list here after adding
+    // For now, we just log the added product
+    console.log('Added product:', product);
+  };
+
+  const handleStartAdding = () => {
+    setIsAdding(true);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="App">
+      {isAdding ? (
+        <ProductForm onAddProduct={handleAddProduct} onCancel={handleBack} />
+      ) : selectedProduct ? (
+        <Product product={selectedProduct} onBack={handleBack} />
+      ) : (
+        <>
+          <ProductList onSelectProduct={handleSelectProduct} />
+          <button onClick={handleStartAdding}>Add Product</button>
+        </>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
