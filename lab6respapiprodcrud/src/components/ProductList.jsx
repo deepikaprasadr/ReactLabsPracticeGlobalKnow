@@ -1,4 +1,4 @@
-// src/components/ProductList.js
+ // src/components/ProductList.js
 import React, { useEffect, useState } from 'react';
 
 function ProductList({ onSelectProduct }) {
